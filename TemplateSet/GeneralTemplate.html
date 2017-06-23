@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{template_name}}</title>
+
+	<meta name="description" content="NMPC,2016,Shanghai">
+    <meta name="keywords" content="NMPC 2016">
+    <meta name="author" content="Daxie">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link href="/static/css/arso.css" rel="stylesheet">
+    <link href="/static/images/logo.ico" type="static/image/x-icon" rel="shortcut icon">
+</head>
+<body>
+	<!-- begin header -->
+	<!-- end header -->
+	<!-- begin container -->
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+			<!-- begin tab -->
+				<ul class="nav nav-stacked">
+				 	<li role="presentation"><a href="contest_committees.html"><b>工位信息</b></a></li>
+  					<li role="presentation" class="active"><a href="contest_committees.html"><b>时间</b></a></li>
+  					<li role="presentation"><a href="contest_agenda.html"><b>操作人员</b></a></li>
+  					<li role="presentation"><a href="contest_agenda.html"><b>RFID</b></a></li>
+				</ul>
+			<!-- end tab -->
+			</div>
+			
+			<div class="col-md-9">
+				<!-- begin content-about -->
+				<h4 class="crimson-font"><span class="glyphicon glyphicon-send" aria-hidden="true"></span><b>操作规范图片</b></h4>
+				<hr>
+				<img src="/static/images/{{img_add}}">
+				<!-- end content-about -->
+			</div>
+
+			<!-- begin tab-content -->
+			<div id="test" class="col-md-9">
+				<!-- begin content-about -->
+				<h4 class="crimson-font"><span class="glyphicon glyphicon-send" aria-hidden="true"></span><b>Work Station</b></h4>
+				<hr>
+				{% for value in item_list %} 
+				<img src="/static/images/{{value|safe}}">
+				{% endfor %} 
+				<!-- end content-about -->
+			</hr>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<!-- end container -->
+	<!-- begin footer -->
+	<footer>
+		<div class="copyright">
+			<p class="text-center">
+				Copyright@2017 CC   office address: Tel: Email:
+			</p>
+		</div>
+	</footer>
+	<!-- end footer -->
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 
+	<script> setInterval(test,100) setTimeout("location.href=''",200)	</script>-->
+</body>
+</html>
